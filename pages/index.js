@@ -13,7 +13,6 @@ export default function Home() {
         <meta name="keyword" content="nextjs, huntingcoder blog, hunting coder" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      {/* <Script src='/sc.js' strategy='lazyOnload'></Script> */}
       <nav className={styles.mainnav}>
         <ul>
           <Link href='/'><li>Home</li> </Link>
