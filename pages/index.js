@@ -3,19 +3,18 @@ import Image from 'next/image'
 import Script from 'next/script'
 import Link from 'next/link'
 import styles from '../styles/Home.module.css'
-import Dummy from '../components/dummy'
 
-// import styles1 from '../styles/Home1.module.css'
-// import styles2 from '../styles/Home2.module.css'
 
 export default function Home() {
   return (
     <div className={styles.container}>
-      <Dummy />
       <style jsx>
         {`
-        .mySpan {
-          color: red;
+        h2{
+          font-size: 38px;
+        }
+        h3{
+          font-size: 28px;
         }
         `}
       </style>
@@ -38,8 +37,11 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          <span className='mySpan dummy'>Hunting Coder</span>
+          <span className='dummy'>Hunting Coder</span>
         </h1>
+        <div className={styles.imagewrap}>
+          <Image className={styles.myImg} src="/homeimg.jfif" width={237} height={158} />
+        </div>
 
         <p className={styles.description}>
           A blog for hunting coders by a hunting coder
@@ -47,16 +49,17 @@ export default function Home() {
 
         {/* <div className={`${styles1.con}${styles2.con}`}> */}
         <div>
+          <h2>Popular Blogs</h2>
           <div className="blogItem">
-            <h2>How to learn JavaScript in 2023?</h2>
+            <h3>How to learn JavaScript in 2023?</h3>
             <p>JavaScript is the language used to design logic for the web</p>
           </div>
           <div className="blogItem">
-            <h2>How to learn JavaScript in 2023?</h2>
+            <h3>How to learn JavaScript in 2023?</h3>
             <p>JavaScript is the language used to design logic for the web</p>
           </div>
           <div className="blogItem">
-            <h2>How to learn JavaScript in 2023?</h2>
+            <h3>How to learn JavaScript in 2023?</h3>
             <p>JavaScript is the language used to design logic for the web</p>
           </div>
 
@@ -64,16 +67,7 @@ export default function Home() {
       </main>
 
       <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
+
       </footer>
     </div>
   )
