@@ -20,11 +20,11 @@ const blog = () => {
     return (
         <div className={styles.container}>
             <main className={styles.main}>
-                {blogs.map((blogItem) => {
-                    return <div key={blogItem.title} >
-                        <Link href={'/blogpost/learn-javascript'}>
-                            <h3 className={styles.blogItemh3}>{blogItem.title}</h3></Link>
-                        <p>JavaScript is the language used to design logic for the web</p>
+                {blogs.map((blogitem) => {
+                    return <div key={blogitem.slug} >
+                        <Link href={`/blogpost/${blogitem.slug}`}>
+                            <h3 className={styles.blogItemh3}>{blogitem.title}</h3></Link>
+                        <p className={styles.blogItemp}>{blogitem.content.substr(0, 140)}... <button>Read More</button></p>
                     </div>
                 })}
             </main>
