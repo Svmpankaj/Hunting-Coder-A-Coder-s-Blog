@@ -12,7 +12,6 @@ const blog = () => {
             return a.json();
         })
             .then((parsed) => {
-                console.log(parsed)
                 setBlogs(parsed)
             })
     }, [])
