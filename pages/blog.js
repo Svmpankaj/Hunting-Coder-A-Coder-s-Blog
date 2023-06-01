@@ -26,7 +26,9 @@ const blog = (props) => {
     )
 }
 
-export async function getServerSideProps(context) {
+
+
+export async function getStatic(context) {
     let data = await fetch('http://localhost:3000/api/blogs')
     let allBlogs = await data.json()
 

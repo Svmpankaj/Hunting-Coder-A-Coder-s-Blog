@@ -18,12 +18,23 @@ const slug = (props) => {
     )
 }
 
+export async function getStaticPaths() {
+    return {
+        paths: [
+            { params: { slug: 'how-to-learn-flask' } },
+            { params: { slug: 'how-to-learn-javascript' } },
+            { params: { slug: 'how-to-learn-nextjs' } },
+        ],
+        fallback: true // false or 'blocking'
+    };
+}
 
 
-export async function getServerSideProps(context) {
-    // console.log(context.query)
-    // const router = useRouter();
-    const { slug } = context.query
+
+export async function getStaticProps(context) {
+    console.log(context)
+    const { slug } = context.params;
+
     let data = await fetch(`http://localhost:3000/api/getblog?slug=${slug}`)
     let myBlogs = await data.json()
 
