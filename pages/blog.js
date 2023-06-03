@@ -31,7 +31,7 @@ const Blog = (props) => {
 
 
 export async function getStaticProps(context) {
-    let data = await fs.promises.readdir("blogdata")
+    let data = await fs.promises.readdir("blogdata");
     let myfile;
     let allBlogs = []
     for (let index = 0; index < data.length; index++) {
@@ -47,4 +47,4 @@ export async function getStaticProps(context) {
     }
 }
 
-export default Blog
+export default Blog;
