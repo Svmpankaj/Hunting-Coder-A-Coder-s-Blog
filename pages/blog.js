@@ -8,7 +8,7 @@ import * as fs from 'fs';
 // Step 2: Iterate through them and Display them 
 const Blog = (props) => {
     console.log(props)
-    const [blogs, setBlogs] = useState(props.allBlogs)
+    const [blogs, setBlogs] = useState(props.allBlogs);
     // useEffect(() => {
 
     // }, [])
