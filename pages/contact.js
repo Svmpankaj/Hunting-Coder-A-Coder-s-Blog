@@ -12,12 +12,44 @@ const contact = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
+        console.log(name, email, phone, desc)
+        const data = { name, email, phone, desc };
+
+        fetch('http://localhost:3000/api/postcontact', {
+            method: 'POST', // or 'PUT
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data),
+        })
+            .then(response => response.text())
+            .then(data => {
+                console.log('Success:', data);
+                alert("Thanks for contacting us")
+                setName('')
+                setEmail('')
+                setPhone('')
+                setDesc('')
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
     }
 
     const handleChange = (e) => {
-        if (e.target.name == 'phone') {
+        if (e.target.name == 'name') {
+            setName(e.target.value)
+        }
+        else if (e.target.name == 'email') {
+            setEmail(e.target.value)
+        }
+        else if (e.target.name == 'phone') {
             setPhone(e.target.value)
         }
+        else if (e.target.name == 'desc') {
+            setDesc(e.target.value)
+        }
+
         console.log(e, "change")
     }
 
@@ -40,7 +72,7 @@ const contact = () => {
                 </div>
                 <div className={styles.mb3}>
                     <label htmlFor="desc">Elaborate your concern</label>
-                    <textarea value={desc} onChange={handleChange} className='form-control' placeholder='Write your concern here' name="" id="desc"></textarea>
+                    <textarea value={desc} onChange={handleChange} className='form-control' placeholder='Write your concern here' name='desc' id="desc" />
                 </div>
                 <button type="submit" className="btn btn-primary">Submit</button>
             </form>
