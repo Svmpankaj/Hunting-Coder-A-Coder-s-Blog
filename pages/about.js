@@ -16,6 +16,9 @@ function about() {
                 <li>Services 3</li>
                 <li>Services 4</li>
                 <li>Services 5</li>
+                <li>Services 6</li>
+                <li>Services 7</li>
+                <li>Services 8</li>
             </ul>
             <h2>Contact Us</h2>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi quam repellat officia facere vel hic sed perferendis assumenda excepturi iusto. Consequuntur, fugiat exercitationem ex eveniet dolores explicabo minima error quos? Harum quaerat expedita atque dolorem. Odio, atque quasi. Neque earum dolore, vero amet quos sapiente nam ullam deleniti corrupti error, at maiores mollitia facilis eos esse?</p>
