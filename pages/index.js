@@ -31,16 +31,18 @@ export default function Home() {
           <h2 className={styles.h2}>Latest Blogs</h2>
           <div className="blogItem">
             <h3 className={styles.h3}>How to learn JavaScript in 2023?</h3>
-            <p>JavaScript is the language used to design logic for the web</p>
+            <p>JavaScript is the language used to design logic for the web. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus corporis quia porro?</p>
+            <button className={styles.btn}>Read more</button>
           </div>
           <div className="blogItem">
             <h3 className={styles.h3}>How to learn JavaScript in 2023?</h3>
-            <p>JavaScript is the language used to design logic for the web</p>
+            <p className={styles.p}>JavaScript is the language used to design logic for the web</p>
             <button className={styles.btn}>Read more</button>
           </div>
           <div className="blogItem">
             <h3 className={styles.h3}>How to learn JavaScript in 2023?</h3>
             <p>JavaScript is the language used to design logic for the web</p>
+            <button className={styles.btn}>Read more</button>
           </div>
 
         </div>

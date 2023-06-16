@@ -136,13 +136,22 @@
 }
 
 .h3 {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
+  margin-top: 0;
+  margin-bottom: 11px;
 }
 
 .btn {
   color: white;
   background: rgb(37, 37, 37);
-  padding: 7px 10px;
+  padding: 7px 6px;
   cursor: pointer;
-  border-radius: 6px;
+  font-size: 12px;
+  border-radius: 9px;
+  margin-bottom: 9px;
+}
+
+.p {
+  margin: 16px 0;
+  margin-top: 3px;
 }
