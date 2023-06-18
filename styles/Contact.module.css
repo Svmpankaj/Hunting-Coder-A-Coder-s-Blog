@@ -25,3 +25,13 @@
     color: grey;
     padding: 5px 4px;
 }
+
+.btn {
+    color: white;
+    background: black;
+    padding: 7px 6px;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 12px;
+    margin: 9px;
+}

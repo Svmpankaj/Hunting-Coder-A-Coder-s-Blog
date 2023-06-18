@@ -74,7 +74,7 @@ const contact = () => {
                     <label className={styles.formlabel} htmlFor="desc">Elaborate your concern</label>
                     <textarea className={styles.input} value={desc} onChange={handleChange} name='desc' id="desc" />
                 </div>
-                <button type="submit" className="btn btn-primary">Submit</button>
+                <button type="submit" className={styles.btn}>Submit</button>
             </form>
         </div>
     )
