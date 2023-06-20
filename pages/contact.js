@@ -2,8 +2,6 @@ import React, { useState } from 'react'
 import styles from '../styles/Contact.module.css'
 
 
-
-
 const contact = () => {
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
@@ -12,7 +10,6 @@ const contact = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        console.log(name, email, phone, desc)
         const data = { name, email, phone, desc };
 
         fetch('http://localhost:3000/api/postcontact', {
@@ -24,7 +21,6 @@ const contact = () => {
         })
             .then(response => response.text())
             .then(data => {
-                console.log('Success:', data);
                 alert("Thanks for contacting us")
                 setName('')
                 setEmail('')
@@ -49,8 +45,6 @@ const contact = () => {
         else if (e.target.name == 'desc') {
             setDesc(e.target.value)
         }
-
-        console.log(e, "change")
     }
 
     return (
@@ -67,7 +61,7 @@ const contact = () => {
                     <div id="emailHelp" className={styles.formtext}>We'll never share your email with anyone else.</div>
                 </div>
                 <div className={styles.mb3}>
-                    <label htmlFor="phone" className={styles.formlabel}>Password</label>
+                    <label htmlFor="phone" className={styles.formlabel}>Phone</label>
                     <input className={styles.input} type="phone" value={phone} onChange={handleChange} id="phone" name='phone' required />
                 </div>
                 <div className={styles.mb3}>

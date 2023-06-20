@@ -24,9 +24,6 @@ export default function Home() {
           <span className='dummy'>&lt;HuntingCoder /&gt;</span>
         </h1>
 
-
-
-        {/* <div className={`${styles1.con}${styles2.con}`}> */}
         <div>
           <h2 className={styles.h2}>Latest Blogs</h2>
           <div className="blogItem">

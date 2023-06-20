@@ -8,7 +8,6 @@ const Slug = (props) => {
     function createMarkup(c) {
         return { __html: c }
     }
-
     const [blog, setBlog] = useState(props.myBlogs);
 
     return (
@@ -17,7 +16,6 @@ const Slug = (props) => {
                 <h1>{blog && blog.title}</h1>
                 <hr />
                 {blog && <div dangerouslySetInnerHTML={createMarkup(blog.content)}></div>}
-
             </main>
         </div>
     )
@@ -38,7 +36,6 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context) {
     const { slug } = context.params;
-
     let myBlog = await fs.promises.readFile(`blogdata/${slug}.json`, 'utf-8')
 
     return {
